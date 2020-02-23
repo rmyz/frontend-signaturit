@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import { rem } from 'polished';
+import { theme } from '../../styles/theme';
 
 export const Wrapper = styled.div`
   display: flex;
@@ -17,14 +18,14 @@ export const StyledInput = styled.input`
 
 export const StyledButton = styled.button`
   margin-left: ${rem('5px')};
-  background: #234b55;
+  background: ${theme.secondaryColor};
   color: white;
-  border: ${rem('2px')} solid #234b55;
-  border-radius: ${rem('3px')};
+  border: 2px solid ${theme.secondaryColor};
+  border-radius: 3px;
   cursor: pointer;
 
   :hover {
     background: white;
-    color: #234b55;
+    color: ${theme.secondaryColor};
   }
 `;

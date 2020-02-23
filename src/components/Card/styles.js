@@ -1,11 +1,12 @@
 import styled from 'styled-components';
 import { rem } from 'polished';
+import { theme } from '../../styles/theme';
 
 export const CardWrapper = styled.div`
   width: ${rem('480px')};
   height: ${rem('280px')};
-  border: ${rem('2px')} solid #234b55;
-  border-radius: ${rem('5px')};
+  border: 2px solid ${theme.secondaryColor};
+  border-radius: 5px;
 
   @media (max-width: 1000px) {
     max-width: ${rem('340px')};
@@ -19,7 +20,7 @@ export const TitleWrapper = styled.div`
   font-weight: 600;
   text-transform: uppercase;
   font-style: italic;
-  background: #234b55;
+  background: ${theme.secondaryColor};
   color: white;
 `;
 

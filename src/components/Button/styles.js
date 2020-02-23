@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import { rem } from 'polished';
+import { theme } from '../../styles/theme';
 
 const getComputedProps = ({ bigMode }) => `
   width: ${bigMode ? rem('250px') : rem('100px')};
@@ -8,10 +9,10 @@ const getComputedProps = ({ bigMode }) => `
 `;
 
 export const StyledButton = styled.button`
-  background: #7bb928;
+  background: ${theme.mainColor};
   color: white;
-  border: ${rem('2px')} solid #7bb928;
-  border-radius: ${rem('3px')};
+  border: 2px solid ${theme.mainColor};
+  border-radius: '3px';
   font-weight: 600;
   cursor: pointer;
   text-transform: uppercase;
@@ -19,7 +20,7 @@ export const StyledButton = styled.button`
 
   :hover {
     background: white;
-    color: #7bb928;
+    color: ${theme.mainColor};
   }
 
   ${props => getComputedProps(props)}
