@@ -1,26 +1,30 @@
-## Available Scripts
+# Frontend-Signaturit
 
-In the project directory, you can run:
+## About
 
-### `npm start`
+This is the `Full stack` coding challenge of Signaturit.
+This project is structured as a `Clean Architecture`, with the principles of `Clean Code` and `SOLID`.
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Commands
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+Please note that you also need [backend-signaturit](https://github.com/rmyz/backend-signaturit) running in the background in the `PORT=3025` to make the petitions of the game work.
 
-### `npm test`
+First of all, we need to install the project:
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+```
+  npm i
+```
 
-### `npm run build`
+After that, we can both launch the dev server or the test runner.
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+To launch the dev server:
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+```
+  npm run start
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+To run the tests:
+
+```
+  npm run test
+```
