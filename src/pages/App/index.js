@@ -14,36 +14,20 @@ const App = () => {
   const [contractParty1, setContractParty1] = useState('');
   const [contractParty2, setContractParty2] = useState('');
 
-  const onClickClearParty1 = () => {
-    setContractParty1('');
+  const onClickClear = setContract => () => {
+    setContract('');
   };
 
-  const onClickKingParty1 = () => {
-    setContractParty1(`K${contractParty1}`);
+  const onClickKing = (setContract, contract) => () => {
+    setContract(`K${contract}`);
   };
 
-  const onClickNotaryParty1 = () => {
-    setContractParty1(`${contractParty1}N`);
+  const onClickNotary = (setContract, contract) => () => {
+    setContract(`${contract}N`);
   };
 
-  const onClickValidatorParty1 = () => {
-    setContractParty1(`${contractParty1}V`);
-  };
-
-  const onClickClearParty2 = () => {
-    setContractParty2('');
-  };
-
-  const onClickKingParty2 = () => {
-    setContractParty2(`K${contractParty2}`);
-  };
-
-  const onClickNotaryParty2 = () => {
-    setContractParty2(`${contractParty2}N`);
-  };
-
-  const onClickValidatorParty2 = () => {
-    setContractParty2(`${contractParty2}V`);
+  const onClickValidator = (setContract, contract) => () => {
+    setContract(`${contract}V`);
   };
 
   const onClickTrialTime = () => {
@@ -68,10 +52,10 @@ const App = () => {
           title="Party 1"
           score={globalScore.party1}
           contract={contractParty1}
-          onClearClick={onClickClearParty1}
-          onClickKing={onClickKingParty1}
-          onClickNotary={onClickNotaryParty1}
-          onClickValidator={onClickValidatorParty1}
+          onClearClick={onClickClear(setContractParty1)}
+          onClickKing={onClickKing(setContractParty1, contractParty1)}
+          onClickNotary={onClickNotary(setContractParty1, contractParty1)}
+          onClickValidator={onClickValidator(setContractParty1, contractParty1)}
         />
         <ButtonWrapper>
           <Button title="Trial Time!" bigMode onClick={onClickTrialTime} />
@@ -80,10 +64,10 @@ const App = () => {
           title="Party 2"
           score={globalScore.party2}
           contract={contractParty2}
-          onClearClick={onClickClearParty2}
-          onClickKing={onClickKingParty2}
-          onClickNotary={onClickNotaryParty2}
-          onClickValidator={onClickValidatorParty2}
+          onClearClick={onClickClear(setContractParty2)}
+          onClickKing={onClickKing(setContractParty2, contractParty2)}
+          onClickNotary={onClickNotary(setContractParty2, contractParty2)}
+          onClickValidator={onClickValidator(setContractParty2, contractParty2)}
         />
       </CardsWrapper>
       <HistoricalWrapper>
