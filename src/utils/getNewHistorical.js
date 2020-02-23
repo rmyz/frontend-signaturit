@@ -9,10 +9,10 @@ const getNewHistorical = ({ history, globalScore, data }) => {
   }
 
   if (winner === 'party1') {
-    newLine = `Party 1 (${globalScore.party1} points) has won to Party 2 (${globalScore.party2} points)`;
+    newLine = `Party 1 (${globalScore.party1 + 1} points) has won to Party 2 (${globalScore.party2} points)`;
   }
   if (winner === 'party2') {
-    newLine = `Party 2 (${globalScore.party2} points) has won to Party 1 (${globalScore.party1} points)`;
+    newLine = `Party 2 (${globalScore.party2 + 1} points) has won to Party 1 (${globalScore.party1} points)`;
   }
 
   return [...history, newLine];
