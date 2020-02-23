@@ -2,16 +2,21 @@ import styled from 'styled-components';
 import { rem } from 'polished';
 
 export const CardWrapper = styled.div`
-  width: 25vw;
-  height: 30vh;
-  border: ${rem('2px')} solid black;
+  width: ${rem('480px')};
+  height: ${rem('280px')};
+  border: ${rem('2px')} solid #234b55;
   border-radius: ${rem('5px')};
+
+  @media (max-width: 1000px) {
+    max-width: ${rem('340px')};
+  }
 `;
 
 export const TitleWrapper = styled.div`
-  padding: ${rem('4px')} 0 0 ${rem('4px')};
+  padding: ${rem('8px')};
 
-  font-size: ${rem('18px')};
+  font-size: ${rem('20px')};
+  font-weight: 600;
   text-transform: uppercase;
   font-style: italic;
   background: #234b55;
@@ -30,6 +35,6 @@ export const ContractWrapper = styled.div`
 `;
 
 export const ScoreWrapper = styled.div`
-  margin-top: ${rem('32px')};
+  margin-top: ${rem('24px')};
   margin-left: ${rem('32px')};
 `;

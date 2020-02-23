@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import { Wrapper, InputWrapper, StyledInput } from './styles';
+import { Wrapper, InputWrapper, StyledInput, StyledButton } from './styles';
 
 const Input = ({ labelText, inputValue, onClearClick }) => {
   return (
@@ -9,9 +9,9 @@ const Input = ({ labelText, inputValue, onClearClick }) => {
       <label data-testid="labelInput">{labelText}</label>
       <InputWrapper>
         <StyledInput type="text" readOnly value={inputValue} />
-        <button data-testid="clearButton" onClick={onClearClick}>
+        <StyledButton data-testid="clearButton" onClick={onClearClick}>
           CLEAR
-        </button>
+        </StyledButton>
       </InputWrapper>
     </Wrapper>
   );

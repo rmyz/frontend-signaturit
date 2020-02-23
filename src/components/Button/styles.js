@@ -8,5 +8,19 @@ const getComputedProps = ({ bigMode }) => `
 `;
 
 export const StyledButton = styled.button`
+  background: #7bb928;
+  color: white;
+  border: ${rem('2px')} solid #7bb928;
+  border-radius: ${rem('3px')};
+  font-weight: 600;
+  cursor: pointer;
+  text-transform: uppercase;
+  margin: ${rem('2px')};
+
+  :hover {
+    background: white;
+    color: #7bb928;
+  }
+
   ${props => getComputedProps(props)}
 `;

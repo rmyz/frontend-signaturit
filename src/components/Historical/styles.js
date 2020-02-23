@@ -8,6 +8,10 @@ export const Wrapper = styled.div`
   font-size: ${rem('18px')};
   max-height: ${rem('300px')};
   overflow-y: auto;
+
+  @media (max-width: 1000px) {
+    max-height: ${rem('100px')};
+  }
 `;
 
 export const StyledSpan = styled.span`
