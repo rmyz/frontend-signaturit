@@ -3,9 +3,9 @@ import PropTypes from 'prop-types';
 
 import { StyledButton } from './styles';
 
-const Button = ({ title, bigMode, onClick }) => {
+const Button = ({ title, bigMode, onClick, ...rest }) => {
   return (
-    <StyledButton bigMode={bigMode} onClick={onClick}>
+    <StyledButton data-testid="button" bigMode={bigMode} onClick={onClick} {...rest}>
       {title}
     </StyledButton>
   );

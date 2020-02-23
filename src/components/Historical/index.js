@@ -10,7 +10,11 @@ const Historical = ({ history }) => {
     });
   };
 
-  return <Wrapper>{renderHistory()}</Wrapper>;
+  return <Wrapper data-testid="historicalWrapper">{renderHistory()}</Wrapper>;
+};
+
+Historical.defaultProps = {
+  history: [],
 };
 
 Historical.propTypes = {

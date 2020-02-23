@@ -5,11 +5,13 @@ import { Wrapper, InputWrapper, StyledInput } from './styles';
 
 const Input = ({ labelText, inputValue, onClearClick }) => {
   return (
-    <Wrapper>
-      <label>{labelText}</label>
+    <Wrapper data-testid="inputWrapper">
+      <label data-testid="labelInput">{labelText}</label>
       <InputWrapper>
-        <StyledInput type="text" readOnly value={inputValue}></StyledInput>
-        <button onClick={onClearClick}>CLEAR</button>
+        <StyledInput type="text" readOnly value={inputValue} />
+        <button data-testid="clearButton" onClick={onClearClick}>
+          CLEAR
+        </button>
       </InputWrapper>
     </Wrapper>
   );
