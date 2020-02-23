@@ -6,17 +6,17 @@ import { CardWrapper, TitleWrapper, ButtonsWrapper, ContractWrapper, ScoreWrappe
 import Button from '../Button';
 import Input from '../Input';
 
-const Card = ({ title, score, contract }) => {
+const Card = ({ title, score, contract, onClearClick, onClickKing, onClickNotary, onClickValidator }) => {
   return (
     <CardWrapper>
       <TitleWrapper>{title}</TitleWrapper>
       <ButtonsWrapper>
-        <Button title="Add K" onClick={''} />
-        <Button title="Add N" onClick={''} />
-        <Button title="Add V" onClick={''} />
+        <Button title="Add K" onClick={onClickKing} />
+        <Button title="Add N" onClick={onClickNotary} />
+        <Button title="Add V" onClick={onClickValidator} />
       </ButtonsWrapper>
       <ContractWrapper>
-        <Input labelText="Contract" inputValue={contract}></Input>
+        <Input labelText="Contract" inputValue={contract} onClearClick={onClearClick}></Input>
       </ContractWrapper>
       <ScoreWrapper>
         {title} has {score || 0} points
@@ -29,6 +29,10 @@ Card.propTypes = {
   title: PropTypes.string,
   score: PropTypes.number,
   contract: PropTypes.string,
+  onClearClick: PropTypes.func,
+  onClickKing: PropTypes.func,
+  onClickNotary: PropTypes.func,
+  onClickValidator: PropTypes.func,
 };
 
 export default Card;
