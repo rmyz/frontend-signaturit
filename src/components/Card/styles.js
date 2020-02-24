@@ -15,7 +15,6 @@ export const CardWrapper = styled.div`
 
 export const TitleWrapper = styled.div`
   padding: ${rem('8px')};
-
   font-size: ${rem('20px')};
   font-weight: 600;
   text-transform: uppercase;
@@ -25,9 +24,9 @@ export const TitleWrapper = styled.div`
 `;
 
 export const ButtonsWrapper = styled.div`
-  padding: ${rem('32px')};
   display: flex;
   justify-content: space-evenly;
+  padding: ${rem('32px')};
 `;
 
 export const ContractWrapper = styled.div`

@@ -9,14 +9,14 @@ const getComputedProps = ({ bigMode }) => `
 `;
 
 export const StyledButton = styled.button`
+  margin: ${rem('2px')};
   background: ${theme.mainColor};
   color: white;
+  text-transform: uppercase;
+  font-weight: 600;
   border: 2px solid ${theme.mainColor};
   border-radius: '3px';
-  font-weight: 600;
   cursor: pointer;
-  text-transform: uppercase;
-  margin: ${rem('2px')};
 
   :hover {
     background: white;

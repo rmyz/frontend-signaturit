@@ -5,9 +5,9 @@ export const Wrapper = styled.div`
   display: flex;
   flex-direction: column-reverse;
   align-items: center;
-  font-size: ${rem('18px')};
   max-height: ${rem('300px')};
   overflow-y: auto;
+  font-size: ${rem('18px')};
 
   @media (max-width: 1000px) {
     max-height: ${rem('100px')};
