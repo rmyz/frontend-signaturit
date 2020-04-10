@@ -1,5 +1,13 @@
 # Frontend-Signaturit
 
+## Test Description
+
+We want you to create a web app connected to the API that you have created on the first phase. It
+should allow you to create contracts and display the results of the trials. You will find some ideas on
+the following wireframe:
+
+![Wireframe](docs/wireframe.png)
+
 ## About
 
 This is the `Full stack` coding challenge of Signaturit.
